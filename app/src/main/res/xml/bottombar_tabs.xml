@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<tabs>
+    <tab
+        id="@+id/tab_recents"
+        title="Recents"
+        icon="@drawable/ic_recents"
+        inActiveColor="#00000000"
+        activeColor="#FFF"
+        barColorWhenSelected="#FE3D81"
+        />
+    <tab
+        id="@+id/tab_friends"
+        title="Friends"
+        inActiveColor="#00000000"
+        activeColor="#FFF"
+        icon="@drawable/ic_friends"
+        barColorWhenSelected="#FF5252"
+        />
+</tabs>

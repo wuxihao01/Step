@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <com.example.um.step.StepView
+            android:id="@+id/step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/achievement_date_iv"
+            />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="你当前的步数："
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获得当前步数"
+            android:onClick="getstep"
+            />
+
+        <com.lixs.charts.BarChart.LBarChartView
+            android:id="@+id/frameNewBase"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:barShowNumber="6"
+            app:borderColor="@color/colorAccent"
+            app:bottomTextSpace="40dp"
+            app:dataTextColor="@color/colorPrimaryDark"
+            app:dataTextSize="12sp"
+            app:descriptionTextColor="@color/colorPrimary"
+            app:descriptionTextSize="20sp"
+            app:isClickAnimation="true"
+            app:labelTextColor="@color/colorPrimary"
+            app:labelTextSize="10sp"
+            app:leftTextSpace="30dp"
+            app:title="最近7天运动步数"
+            app:titleTextColor="@color/colorPrimaryDark"
+            app:titleTextSize="20sp"
+            app:topTextSpace="50dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.roughike.bottombar.BottomBar
+                android:id="@+id/bottomBar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                app:bb_behavior="shifting"
+                app:bb_tabXmlResource="@xml/bottombar_tabs" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
